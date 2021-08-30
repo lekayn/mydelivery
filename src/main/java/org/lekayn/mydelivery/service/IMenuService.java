@@ -4,6 +4,8 @@ import org.lekayn.mydelivery.model.Menu;
 
 import java.util.Optional;
 
+/** Интерфейс взаимодействия контролера с моделью - с сущностью Menu(Меню ресторана)   */
+
 public interface IMenuService {
 
     /**

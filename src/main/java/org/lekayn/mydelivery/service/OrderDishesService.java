@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/** #### Сервис для работы с репозиторием Блюда заказа OrderDishesService
+ * Реализует интерфейс IOrderDishesService
+ * Реализует репозиторий Блюда заказа - orderDishesRepository */
+
 @Service
 public class OrderDishesService implements IOrderDishesService {
     private final OrderDishesRepository orderDishesRepository;
@@ -15,11 +19,10 @@ public class OrderDishesService implements IOrderDishesService {
     public OrderDishesService(OrderDishesRepository orderDishesRepository) {
         this.orderDishesRepository = orderDishesRepository;
     }
-
+    /** ##### Методы:
+     *  - saveALl(List<OrderDishes> orderDishesList) - "Сохранить список блюд заказа в БД" */
     @Override
     public Boolean saveALl(List<OrderDishes> orderDishesList) {
-        if (orderDishesRepository.saveAll(orderDishesList) != null) {
-            return true;
-        } else return false;
+        return orderDishesRepository.saveAll(orderDishesList) != null;
     }
 }

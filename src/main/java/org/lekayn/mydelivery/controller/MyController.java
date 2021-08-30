@@ -1,6 +1,5 @@
 package org.lekayn.mydelivery.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
 import org.lekayn.mydelivery.model.Cafe;
 import org.lekayn.mydelivery.model.Menu;
@@ -17,6 +16,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
+
+/** #### REST-контроллер
+ * реализует все сервисы для взаимодействия с сущностями БД
+ * принимает запросы от пользователей системы и передает их на выполнение в нужный сервис */
 
 @RestController
 public class MyController {
@@ -58,7 +61,7 @@ public class MyController {
      * Оформить заказ еды
      */
     @PostMapping(path = "/cafe/{cafe_id}", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<?> newOrder(@Valid @RequestBody String request) throws JsonProcessingException {
+    public ResponseEntity<?> newOrder(@Valid @RequestBody String request) {
         Gson gson = new Gson();
 
         Orders order = gson.fromJson(request, Orders.class);

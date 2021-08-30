@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+/** #### Сервис для работы с репозиторием Меню MenuService
+ * Реализует интерфейс IMenuService
+ * Реализует репозиторий Меню - menuRepository  */
+
 @Service
 public class MenuService implements IMenuService {
 
@@ -17,6 +21,8 @@ public class MenuService implements IMenuService {
         this.menuRepository = menuRepository;
     }
 
+    /** ##### Методы:
+     *  - findMenuByCafeId(Long id) - "Получить меню ресторана" */
     @Override
     public Optional<Menu> findMenuByCafeId(Long id) {
         return menuRepository.findByCafe_CafeId(id);

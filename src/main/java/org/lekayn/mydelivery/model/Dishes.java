@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
+/** #### Dishes - POJO-класс, описывающий сущность БД dishes(блюда ресторана) */
+
 @Data
 @Entity
 @Table(name = "dishes")

@@ -5,6 +5,10 @@ import org.lekayn.mydelivery.repository.OrdersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/** #### Сервис для работы с репозиторием Заказы OrdersService
+ * Реализует интерфейс IOrdersService
+ * Реализует репозиторий Заказы - OrdersRepository */
+
 @Service
 public class OrdersService implements IOrdersService {
     private final OrdersRepository ordersRepository;
@@ -14,11 +18,11 @@ public class OrdersService implements IOrdersService {
         this.ordersRepository = ordersRepository;
     }
 
+/** ##### Методы:
+ * - save(Orders order) - сохранить данные заказа в БД */
     @Override
     public Boolean save(Orders order) {
-        if (ordersRepository.save(order) != null) {
-            return true;
-        } else return false;
+        return ordersRepository.save(order) != null;
 
     }
 }

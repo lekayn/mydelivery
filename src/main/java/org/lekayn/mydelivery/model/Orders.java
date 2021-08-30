@@ -6,6 +6,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
+/** #### Orders - POJO-класс, описывающий сущность БД orders(заказы) */
+
 @Data
 @Entity
 @Table(name = "orders")

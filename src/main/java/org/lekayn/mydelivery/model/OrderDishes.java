@@ -6,6 +6,8 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+/** #### OrderDishes - POJO-класс, описывающий сущность БД order_dishes(блюдо заказа) */
+
 @Data
 @Entity
 @Table(name = "order_dishes")

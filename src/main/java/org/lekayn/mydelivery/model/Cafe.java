@@ -5,6 +5,8 @@ import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+/** #### Cafe - POJO-класс, описывающий сущность БД cafe(рестораны) */
+
 @Data
 @Entity
 @Table(name = "cafe")

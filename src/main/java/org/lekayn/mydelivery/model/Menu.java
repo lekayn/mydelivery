@@ -6,6 +6,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
+/** #### Menu - POJO-класс, описывающий сущность БД menu(меню ресторана) */
+
 @Data
 @Entity
 @Table(name = "menu")
